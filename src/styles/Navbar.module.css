@@ -1,0 +1,65 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem 2rem;
+}
+
+.scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #3c3c3c;
+  font-family: var(--font-geist-sans);
+}
+
+.menuWrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Botón para escritorio */
+.desktopMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+
+/* Botón para móvil */
+.mobileMenuButton {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #3c3c3c;
+}
+
+@media (min-width: 768px) {
+  .desktopMenuButton {
+    display: block;
+  }
+  .mobileMenuButton {
+    display: none;
+  }
+}

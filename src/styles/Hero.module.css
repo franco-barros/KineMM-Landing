@@ -1,0 +1,120 @@
+.hero {
+  background-color: #f8f9fa;
+  padding: 6rem 1.5rem 4rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.textArea {
+  flex: 1;
+  text-align: center;
+  max-width: 700px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e6f4f1;
+  color: #00695c;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2.4rem;
+  line-height: 1.3;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.highlightPrimary {
+  color: #00796b;
+}
+
+.highlightSecondary {
+  color: #5e35b1;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btnSecondary {
+  background-color: #5e35b1;
+  color: white;
+}
+
+.btnSecondary:hover {
+  background-color: #4527a0;
+}
+
+.signature {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #777;
+}
+
+.imageContainer {
+  flex: 1;
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialsWrapper {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .textArea {
+    max-width: 50%;
+  }
+
+  .imageContainer {
+    max-width: 45%;
+  }
+}

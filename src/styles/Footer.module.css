@@ -1,0 +1,149 @@
+.footer {
+  background-color: #fafafa;
+  padding: 3rem 1.5rem 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  color: #444;
+  font-family: "Inter", sans-serif;
+  user-select: none;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.section {
+  flex: 1 1 220px;
+  min-width: 220px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  color: #3b2f63;
+  gap: 0.6rem;
+}
+
+.iconLeaf {
+  color: #7cb342; /* Verde natural */
+  font-size: 1.8rem;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #5e35b1;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.list a {
+  color: #5e35b1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
+  cursor: pointer;
+}
+
+.list a:hover,
+.list a:focus-visible {
+  color: #7e57c2;
+  outline: none;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #5e35b1;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.socialLinks a:hover,
+.socialLinks a:focus-visible {
+  color: #7e57c2;
+  outline: none;
+}
+
+.socialLinks svg {
+  font-size: 1.3rem;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: #444;
+}
+
+.contact svg {
+  color: #5e35b1;
+  font-size: 1.2rem;
+}
+
+.bottomBar {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.copy {
+  font-size: 0.875rem;
+  color: #999;
+  user-select: none;
+}
+
+/* Responsive */
+
+@media (max-width: 720px) {
+  .content {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .section {
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .socialLinks {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+}
