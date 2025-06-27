@@ -1,7 +1,10 @@
 "use client";
 import React from "react";
+import { Activity } from "lucide-react";
+import { FadeInOnScroll } from "../utils/fadeInonscroll";
 import styles from "../../styles/service/Services.module.css";
-import ServiceCard from "./ServiceCard";
+import { ServiceCard } from "./card";
+import { ServiceCarousel } from "./carousel"; // ⬅ Asegúrate de importar el nuevo carousel
 import { servicesData } from "../../data/service/ServiceData";
 
 const Services: React.FC = () => {
@@ -15,44 +18,63 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section id="services" className={styles.servicesSection}>
-      <h2 className={styles.sectionTitle}>Services</h2>
+    <FadeInOnScroll>
+      <section id="services" className={styles.servicesSection}>
+        <div className={styles.headerWrapper}>
+          <span className={styles.badge}>
+            <Activity size={18} color="#065f46" />
+            Servicios Profesionales
+          </span>
+          <h2 className={styles.sectionTitle}>
+            <span className={styles.highlightPrimary}>Servicios</span>{" "}
+            <span className={styles.highlightSecondary}>profesionales</span>{" "}
+            <span>para tu bienestar</span>
+          </h2>
+        </div>
 
-      <div className={styles.servicesContainer}>
-        {servicesData.map((service) => {
-          let onClick;
+        {/* Grid para desktop y tablet */}
+        <div className={styles.servicesContainer}>
+          {servicesData.map((service) => {
+            let onClick;
 
-          switch (service.cta) {
-            case "Get a quote":
-            case "Explore solutions":
-            case "Build your site":
-            case "Start your app":
-              onClick = () => handleScrollTo("contactme");
-              break;
-            case "Let’s talk":
-              onClick = handleWhatsApp;
-              break;
-            case "See portfolio":
-              onClick = () => handleScrollTo("projects");
-              break;
-            default:
-              onClick = undefined;
-          }
+            switch (service.cta) {
+              case "Get a quote":
+              case "Explore solutions":
+              case "Build your site":
+              case "Start your app":
+                onClick = () => handleScrollTo("contactme");
+                break;
+              case "Let’s talk":
+                onClick = handleWhatsApp;
+                break;
+              case "See portfolio":
+                onClick = () => handleScrollTo("projects");
+                break;
+              default:
+                onClick = undefined;
+            }
 
-          return (
-            <ServiceCard
-              key={service.title}
-              title={service.title}
-              subtitle={service.subtitle}
-              description={service.description}
-              features={service.features}
-              cta={service.cta}
-              onClick={onClick}
-            />
-          );
-        })}
-      </div>
-    </section>
+            return (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                subtitle={service.subtitle}
+                description={service.description}
+                features={service.features}
+                cta={service.cta}
+                onClick={onClick}
+                Icon={service.icon}
+              />
+            );
+          })}
+        </div>
+
+        {/* Carousel solo visible en mobile */}
+        <div className={styles.mobileCarouselWrapper}>
+          <ServiceCarousel />
+        </div>
+      </section>
+    </FadeInOnScroll>
   );
 };
 

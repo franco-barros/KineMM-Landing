@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { UserCheck } from "lucide-react";
+import { Activity } from "lucide-react";
 import { CarouselTestimonials } from "../carouseltestimonial";
 import styles from "../../styles/Hero.module.css";
 import { testimonials } from "@/data/testimonials";
@@ -26,38 +26,43 @@ const Hero: React.FC = () => {
         <div className={styles.container}>
           <div className={styles.textArea}>
             <div className={styles.badge}>
-              <UserCheck size={18} />
-              <span>Psicólogo Clínico Certificado</span>
+              <Activity size={18} />
+              <span>Kinesiólogo especializado en rehabilitación</span>
             </div>
+
             <h1 className={styles.title}>
               <span className={styles.highlightPrimary}>
-                Transformando vidas a través de la
+                Recuperá tu movilidad
               </span>{" "}
               <span className={styles.highlightSecondary}>
-                psicología especializada
+                con atención profesional
               </span>
             </h1>
+
             <p className={styles.description}>
-              Acompañamiento profesional para superar desafíos emocionales,
-              mejorar relaciones y alcanzar tu mejor versión. Terapia presencial
-              y online, siempre intentando mejorar.
+              Tratamientos personalizados para dolores musculares, lesiones
+              deportivas o rehabilitación funcional. Trabajo en consultorio o a
+              domicilio, priorizando tu bienestar y evolución.
             </p>
+
             <div className={styles.buttons}>
               <button
                 onClick={scrollToContact}
                 className={`${styles.btn} ${styles.btnSecondary}`}
               >
-                Reservar Primera Consulta
+                Agendar Primera Sesión
               </button>
             </div>
 
-            <p className={styles.signature}>Lic. Ivan Waisman – Psicólogo</p>
+            <p className={styles.signature}>
+              Lic. Carlos Mendoza – Kinesiólogo
+            </p>
           </div>
 
           <div className={styles.imageContainer}>
             <Image
-              src="/images/persona.png"
-              alt="Dr. Carlos Mendoza"
+              src="/images/micakine.png"
+              alt="Lic. Carlos Mendoza"
               width={400}
               height={200}
               className={styles.image}

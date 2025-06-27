@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import styles from "../../styles/WhatsappButton.module.css";
+import styles from "../../../styles/utils/WhatsappButton.module.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 interface WhatsappButtonProps {

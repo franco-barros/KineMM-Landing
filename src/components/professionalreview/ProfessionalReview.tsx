@@ -10,8 +10,9 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { FaLeaf, FaSeedling } from "react-icons/fa";
-import styles from "../../styles/ProfessionalReview.module.css";
+import styles from "../../styles/professionalreview/ProfessionalReview.module.css";
 import { FadeInOnScroll } from "../utils/fadeInonscroll";
+import { CarouselProfessional } from "./carouselprofessional";
 
 interface ItemConDesc {
   title: string;
@@ -23,77 +24,65 @@ interface GrupoResena {
   items: (ItemConDesc | string)[];
 }
 
-interface ProfessionalReviewProps {
-  formularioUrl?: string;
-  onContactClick?: () => void;
-}
-
 const reseñaTrabajo: GrupoResena[] = [
   {
-    title: "Cómo trabajo con vos",
+    title: "Mi enfoque como kinesiólogo",
     items: [
       {
-        title: "Acompañamiento Empático",
-        desc: "Brindo un espacio seguro donde te sientas escuchado y comprendido.",
+        title: "Atención personalizada",
+        desc: "Cada tratamiento está adaptado a tus necesidades físicas, tiempos y evolución.",
       },
       {
-        title: "Enfoque Integrativo",
-        desc: "Utilizo técnicas basadas en terapia cognitivo-conductual, humanista y sistémica.",
+        title: "Enfoque integral",
+        desc: "Trabajo la movilidad, el dolor y la funcionalidad con una mirada completa del cuerpo.",
       },
       {
-        title: "Personalización",
-        desc: "Cada proceso terapéutico se adapta a tus necesidades y ritmo único.",
+        title: "Seguimiento cercano",
+        desc: "Acompaño tu progreso paso a paso para lograr una recuperación sostenible.",
       },
     ],
   },
   {
     title: null,
     items: [
-      "Confidencialidad absoluta",
-      "Compromiso y ética profesional",
-      "Resultados con enfoque en bienestar sostenible",
+      "Compromiso profesional",
+      "Confianza y cercanía",
+      "Bienestar a largo plazo",
     ],
   },
 ];
 
-const ProfessionalReview: React.FC<ProfessionalReviewProps> = ({
-  formularioUrl,
-  onContactClick,
-}) => {
-  const iconMap: Record<string, React.ReactNode> = {
-    "Acompañamiento Empático": <HeartHandshake className={styles.cardIcon} />,
-    "Enfoque Integrativo": <Brain className={styles.cardIcon} />,
-    Personalización: <Users className={styles.cardIcon} />,
-  };
+const iconMap: Record<string, React.ReactNode> = {
+  "Atención personalizada": <Users className={styles.cardIcon} />,
+  "Enfoque integral": <Brain className={styles.cardIcon} />,
+  "Seguimiento cercano": <HeartHandshake className={styles.cardIcon} />,
+};
 
-  const valoresIconMap: Record<string, React.ReactNode> = {
-    "Confidencialidad absoluta": <Lock className={styles.cardIcon} />,
-    "Compromiso y ética profesional": (
-      <ShieldCheck className={styles.cardIcon} />
-    ),
-    "Resultados con enfoque en bienestar sostenible": (
-      <FaSeedling className={styles.cardIcon} />
-    ),
-  };
+const valoresIconMap: Record<string, React.ReactNode> = {
+  "Compromiso profesional": <ShieldCheck className={styles.cardIcon} />,
+  "Confianza y cercanía": <Lock className={styles.cardIcon} />,
+  "Bienestar a largo plazo": <FaSeedling className={styles.cardIcon} />,
+};
 
+const ProfessionalReview: React.FC = () => {
   return (
     <FadeInOnScroll>
       <section className={styles.section}>
         <div className={styles.headerWrapper}>
           <div className={styles.badge}>
             <Star size={18} />
-            <span>Reseña Profesional</span>
+            <span>Enfoque Profesional</span>
           </div>
 
           <h2 className={styles.title}>
-            <span className={styles.titlePrimary}>Tu experiencia</span>{" "}
-            <span className={styles.titleSecondary}>importa</span>
+            <span className={styles.titlePrimary}>Tu recuperación</span>{" "}
+            <span className={styles.titleSecondary}>es prioridad</span>
           </h2>
 
           <h3 className={styles.subtitle}>
-            Queremos conocer cómo te sentiste y tu opinión sobre el
-            acompañamiento recibido. Tu testimonio ayuda a otros y mejora
-            nuestro servicio.
+            Mi compromiso es acompañarte con atención cercana y tratamientos
+            efectivos, para que puedas recuperar tu bienestar físico y tu
+            calidad de vida.
           </h3>
         </div>
 
@@ -120,7 +109,7 @@ const ProfessionalReview: React.FC<ProfessionalReviewProps> = ({
               </ul>
 
               <div className={styles.subListWrapper}>
-                <h5 className={styles.subListTitle}>Nuestros valores</h5>
+                <h5 className={styles.subListTitle}>Valores que me definen</h5>
                 <ul className={styles.cardList}>
                   {reseñaTrabajo[1].items.map((item) =>
                     typeof item === "string" ? (
@@ -140,36 +129,35 @@ const ProfessionalReview: React.FC<ProfessionalReviewProps> = ({
           <div className={styles.rightCard}>
             <div className={styles.formPreview}>
               <Star className={styles.previewIcon} />
-              <h4>¿Querés dejar tu reseña?</h4>
-              <p>
-                Tu opinión es fundamental para mejorar y acompañar a más
-                personas en su camino.
-              </p>
-              {onContactClick ? (
-                <button
-                  className={styles.startButton}
-                  type="button"
-                  onClick={onContactClick}
-                >
-                  Dejar reseña
-                </button>
-              ) : (
-                <a
-                  href={formularioUrl || "#"}
-                  className={styles.startButton}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Dejar reseña
-                </a>
-              )}
+              <h4>¿Querés comenzar tu tratamiento?</h4>
+              <p>Consultá sin compromiso y coordinemos tu primera sesión.</p>
+
+              {/* Carrusel profesional */}
+              <div className={styles.carouselBox}>
+                <CarouselProfessional
+                  images={[
+                    "/images/personaskine2.png",
+                    "/images/personaskine1.png",
+                    "/images/personaskine.png",
+                  ]}
+                />
+              </div>
+
+              <a
+                href="https://wa.me/5491166666666?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20una%20sesi%C3%B3n%20de%20kinesiolog%C3%ADa."
+                className={styles.startButton}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Escribir por WhatsApp
+              </a>
             </div>
           </div>
         </div>
 
         <div className={styles.ctaWrapper}>
           <a
-            href="https://wa.me/5491123456789?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20primera%20consulta."
+            href="https://wa.me/5491166666666?text=Hola%2C%20quiero%20agendar%20una%20consulta%20kinesiologica."
             className={styles.startButton}
             target="_blank"
             rel="noopener noreferrer"

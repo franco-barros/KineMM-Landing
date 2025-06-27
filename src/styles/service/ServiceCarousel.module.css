@@ -1,0 +1,24 @@
+.mobileCarousel {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileCarousel {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    position: relative; /* para contener hijos */
+    min-height: 350px; /* evita colapso vertical */
+  }
+
+  .carouselInner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carouselItem {
+    flex: 0 0 100%;
+    /* No opacity ni escala, el desplazamiento maneja la visibilidad */
+  }
+}

@@ -11,7 +11,20 @@
 .aboutTitle {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #5e35b1;
+  color: #1e3a8a; /* azul profesional */
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 0.4rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
 }
 
 .contentContainer {
@@ -29,7 +42,7 @@
 }
 
 .textCard {
-  background-color: #f8f9fa;
+  background-color: #f0f4ff; /* fondo claro azulado */
   padding: 2rem;
   border-radius: 1.25rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
@@ -38,7 +51,7 @@
 .paragraph {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #444;
+  color: #444; /* texto gris profesional */
 }
 
 .imageContainer {

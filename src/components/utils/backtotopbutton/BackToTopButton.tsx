@@ -1,7 +1,7 @@
 "use client";
 
 import { FaArrowUp } from "react-icons/fa";
-import styles from "../../styles/BackToTopButton.module.css";
+import styles from "../../../styles/utils/BackToTopButton.module.css";
 
 const BackToTopButton = () => {
   const handleScrollTop = () => {

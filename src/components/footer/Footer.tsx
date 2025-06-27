@@ -3,10 +3,10 @@
 import React from "react";
 import {
   FaInstagram,
-  FaTiktok,
   FaPhoneAlt,
   FaEnvelope,
-  FaLeaf,
+  FaHeartbeat,
+  FaMapMarkerAlt,
 } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import styles from "../../styles/Footer.module.css";
@@ -33,12 +33,12 @@ const Footer = () => {
         {/* Presentación */}
         <div className={styles.section}>
           <h3 className={styles.title}>
-            <FaLeaf className={styles.iconLeaf} />
-            Lic. Ivan Waisman
+            <FaHeartbeat className={styles.iconLeaf} />
+            Lic. en Kinesiología
           </h3>
           <p className={styles.description}>
-            Psicólogo clínico especializado en bienestar mental y crecimiento
-            personal.
+            Profesional de la salud enfocado en tu bienestar físico,
+            recuperación funcional y calidad de vida.
           </p>
         </div>
 
@@ -58,10 +58,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="#blog"
-                    onClick={(e) => handleInternalLinkClick(e, "blog")}
+                    href="#services"
+                    onClick={(e) => handleInternalLinkClick(e, "services")}
                   >
-                    Blog y recursos
+                    Servicios
                   </a>
                 </li>
                 <li>
@@ -79,7 +79,7 @@ const Footer = () => {
               <h4 className={styles.subtitle}>Redes Sociales</h4>
               <div className={styles.socialLinks}>
                 <a
-                  href="https://www.instagram.com/creandocaminos__"
+                  href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -87,25 +87,21 @@ const Footer = () => {
                   <FaInstagram />
                   <span>Instagram</span>
                 </a>
-                <a
-                  href="https://www.tiktok.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="TikTok"
-                >
-                  <FaTiktok />
-                  <span>TikTok</span>
-                </a>
               </div>
             </div>
 
             <div className={styles.section}>
               <h4 className={styles.subtitle}>Contacto</h4>
               <p className={styles.contact}>
-                <FaPhoneAlt /> +31649393678
+                <FaPhoneAlt /> +54 9 2645 878987
               </p>
               <p className={styles.contact}>
-                <FaEnvelope /> psi.ivanwaisman@gmail.com
+                <FaEnvelope /> l6DZM@example.com
+              </p>
+              <p className={styles.contact}>
+                <FaMapMarkerAlt /> San Juan, Argentina, Rastreador Calivar 553
+                (N) Esquina Ivonne Barud Quattropani. Entrada B° Udap II.
+                Rivadavia.
               </p>
             </div>
           </>
@@ -115,7 +111,8 @@ const Footer = () => {
       {/* Pie común */}
       <div className={styles.bottomBar}>
         <p className={styles.copy}>
-          © 2024 Lic. Ivan Waisman Todos los derechos reservados.
+          © 2024 Lic. en Kinesiología Mica Moreno. Todos los derechos
+          reservados.
         </p>
       </div>
     </footer>

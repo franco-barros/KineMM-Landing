@@ -1,5 +1,5 @@
 .hero {
-  background-color: #f8f9fa;
+  background-color: #ffffff; /* blanco limpio */
   padding: 6rem 1.5rem 4rem;
 }
 
@@ -22,10 +22,10 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #e6f4f1;
-  color: #00695c;
+  background-color: #e0f2fe; /* celeste claro */
+  color: #0369a1; /* azul profesional */
   padding: 0.4rem 1rem;
-  border-radius: 999px;
+  border-radius: 0.6rem;
   font-weight: 500;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
@@ -36,20 +36,20 @@
   line-height: 1.3;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #222;
+  color: #222; /* texto oscuro principal */
 }
 
 .highlightPrimary {
-  color: #00796b;
+  color: #1e3a8a;
 }
 
 .highlightSecondary {
-  color: #5e35b1;
+  color: #10b981;
 }
 
 .description {
   font-size: 1.1rem;
-  color: #555;
+  color: #444;
   margin-bottom: 2rem;
 }
 
@@ -61,25 +61,25 @@
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 1.25rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: none;
+  border: 1px solid #ccc;
 }
 
 .btnSecondary {
-  background-color: #5e35b1;
+  background-color: #0284c7; /* azul llamativo */
   color: white;
 }
 
 .btnSecondary:hover {
-  background-color: #4527a0;
+  background-color: #0369a1; /* azul más oscuro */
 }
 
 .signature {
   margin-top: 1rem;
   font-style: italic;
-  color: #777;
+  color: #666;
 }
 
 .imageContainer {

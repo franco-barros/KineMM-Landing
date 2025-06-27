@@ -1,0 +1,83 @@
+.servicesSection {
+  padding: 4rem 1.5rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.headerWrapper {
+  margin-bottom: 3rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  gap: 0.4rem;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  position: relative;
+  line-height: 1.2;
+}
+
+.sectionTitle::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #10b981;
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.highlightPrimary {
+  color: #10b981;
+  font-weight: 700;
+}
+
+.highlightSecondary {
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+/* Grid para desktop/tablet */
+.servicesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .servicesContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ocultar carrusel por defecto (desktop) */
+.mobileCarouselWrapper {
+  display: none;
+}
+
+/* En mobile: ocultar grid y mostrar carrusel */
+@media (max-width: 768px) {
+  .servicesContainer {
+    display: none;
+  }
+
+  .mobileCarouselWrapper {
+    display: block;
+    margin-top: 2rem;
+  }
+}

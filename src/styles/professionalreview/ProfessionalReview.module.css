@@ -1,0 +1,174 @@
+.section {
+  padding: 4rem 1.5rem;
+  background-color: #ffffff;
+  border-top: 1px solid #eee;
+}
+
+.headerWrapper {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #d1fae5; /* verde claro */
+  color: #065f46; /* verde oscuro */
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  color: #1e3a8a;
+}
+
+.titlePrimary {
+  color: #1e3a8a;
+}
+
+.titleSecondary {
+  color: #10b981;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #444;
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .contentWrapper {
+    flex-direction: row;
+  }
+}
+
+.leftCards,
+.rightCard {
+  flex: 1;
+}
+
+.card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e3a8a;
+}
+
+.cardList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cardListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.iconCircle {
+  background-color: #e0f2fe;
+  color: #2563eb;
+  border-radius: 999px;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.25rem;
+}
+
+.subListWrapper {
+  margin-top: 2rem;
+}
+
+.subListTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #2563eb;
+}
+
+.formPreview {
+  background-color: #f0f9ff;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.previewIcon {
+  color: #10b981;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.startButton {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.startButton:hover {
+  background-color: #1d4ed8;
+}
+
+.badgeIcon {
+  font-size: 1.2rem;
+}
+
+.ctaWrapper {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Carrusel */
+.carouselBox {
+  margin: 1.5rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.carouselBox img {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
